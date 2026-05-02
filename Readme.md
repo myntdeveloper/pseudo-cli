@@ -1,6 +1,12 @@
 # Pseudo CLI (psd)
 
-A lightweight command-line tool to save, manage, and run shell command aliases — written in Go.
+A pet project. A lightweight command-line tool to save, manage, and run shell command aliases — written in Go.
+
+[![Go](https://img.shields.io/badge/Go-1.21+-00ADD8?logo=go&logoColor=white)](https://go.dev/)
+[![Cobra](https://img.shields.io/badge/Cobra-CLI-brightgreen?logo=go&logoColor=white)](https://github.com/spf13/cobra)
+[![Viper](https://img.shields.io/badge/Viper-Config-orange?logo=go&logoColor=white)](https://github.com/spf13/viper)
+[![SQLite](https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](#license)
 
 ## Features
 
@@ -8,7 +14,7 @@ A lightweight command-line tool to save, manage, and run shell command aliases �
 - Run saved commands instantly from anywhere
 - Tag and describe commands for easy organization
 - Search and filter by tag
-- Persistent local storage (`~/.psd/pseudonyms.json`)
+- Persistent local storage via SQLite (`~/.psd/psd.db`)
 - Colorized output for better readability
 
 ## Usage
@@ -106,7 +112,7 @@ pseudo-cli/
 │   │   └── pseudonym.go
 │   ├── runner/             # Business logic
 │   │   └── runner.go
-│   └── store/              # JSON storage layer
+│   └── store/              # SQLite storage layer
 │       ├── store.go
 │       └── errors.go
 ├── main.go
@@ -119,7 +125,7 @@ pseudo-cli/
 - **[Go](https://golang.org/)** — core language
 - **[Cobra](https://github.com/spf13/cobra)** — CLI framework
 - **[Viper](https://github.com/spf13/viper)** — configuration management
-- **JSON** — local persistent storage (`~/.psd/pseudonyms.json`)
+- **[SQLite](https://github.com/modernc-org/sqlite)** — local persistent storage (`~/.psd/psd.db`)
 
 ## Prerequisites
 
